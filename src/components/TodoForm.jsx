@@ -1,9 +1,11 @@
-import React, { useState, useContext } from 'react';
-import { TodoContext } from '../context/index';
+import React, {useState, useContext} from 'react';
+import {TodoContext} from '../context/index';
+import '../styles/TodoForm.css'
+import {FiPlus} from "react-icons/fi";
 
 const TodoForm = () => {
     const [task, setTask] = useState('');
-    const { addTodo } = useContext(TodoContext);
+    const {addTodo} = useContext(TodoContext);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -12,15 +14,22 @@ const TodoForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                value={task}
-                onChange={(e) => setTask(e.target.value)}
-                placeholder="Введите задачу"
-            />
-            <button type="submit">Добавить</button>
-        </form>
+        <div className={"form-wrapper"}>
+            things to do
+            <form
+                onSubmit={handleSubmit}
+                className={"todo-form"}
+            >
+                <input
+                    className={"todo-form__input"}
+                    type="text"
+                    value={task}
+                    onChange={(e) => setTask(e.target.value)}
+                    placeholder="Введите задачу"
+                />
+                <button type="submit"><FiPlus size={30} className={"todo-form__add-btn"}/></button>
+            </form>
+        </div>
     );
 };
 

@@ -1,0 +1,50 @@
+.todo-form {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.todo-form__input {
+    height: 2rem;
+    width: 40vh;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1vh;
+}
+
+@media (max-width: 1200px) {
+    .todo-form__input {
+        width: 50vh;
+    }
+}
+
+@media (min-width: 350px){
+    .form-wrapper {
+        justify-content: center;
+    }
+}
+
+
+
+.form-wrapper {
+    margin: 3vh auto 5vh auto;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 12vh;
+    gap: 2vh;
+}
+
+.todo-form__add-btn:hover {
+    animation: moving 0.2s linear;
+}
+
+@keyframes moving {
+    100% {transform: rotate(90deg);}
+}
+
+

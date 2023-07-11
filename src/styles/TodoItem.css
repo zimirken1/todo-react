@@ -1,0 +1,33 @@
+.todo-list__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 1px solid black;
+    justify-content: center;
+}
+
+@media (max-width: 1200px) and (min-width: 400px){
+    .todo-list__item {
+        width: 80vh;
+    }
+}
+
+.item-text {
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.todo-item__edit-btn:hover, .todo-item__remove-btn:hover, .todo-item__complete-btn:hover {
+    transform: scale(1.2);
+}
+
+.todo-item__remove-btn:hover {
+    color: red;
+}
+
+.todo-item__save-btn:hover {
+    color: green;
+}
