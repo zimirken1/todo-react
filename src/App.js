@@ -1,6 +1,6 @@
 import React from "react";
 import './styles/App.css';
-import TodoForm from "./components/TodoForm";
+import TodoForm from "./components/TodoForm/TodoForm";
 import TodoList from "./components/TodoList";
 import TodoContextProvider from "./context";
 

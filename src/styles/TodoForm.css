@@ -43,7 +43,12 @@
 }
 
 .form-valid {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-valid__error {
     font-family: 'Dancing Script', cursive;
     font-size: small;
-    color: red;
 }
