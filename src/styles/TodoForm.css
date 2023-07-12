@@ -12,6 +12,7 @@
     border: 2px solid black;
     border-radius: 5px;
     padding: 1vh;
+    cursor: pointer;
 }
 
 @media (max-width: 1200px) {
@@ -26,8 +27,6 @@
     }
 }
 
-
-
 .form-wrapper {
     margin: 3vh auto 5vh auto;
     display: flex;
@@ -40,11 +39,11 @@
 }
 
 .todo-form__add-btn:hover {
-    animation: moving 0.2s linear;
+    transform: scale(1.2);
 }
 
-@keyframes moving {
-    100% {transform: rotate(90deg);}
+.form-valid {
+    font-family: 'Dancing Script', cursive;
+    font-size: small;
+    color: red;
 }
-
-
